@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import Main from "./Section";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 export default function Products(props) {
   const [Panel, SetPanel] = useState([]);

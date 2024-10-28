@@ -10,7 +10,7 @@ export default function Footer() {
 
 
 const FOOTER = styled.footer.attrs(()=>({
-    className:`w-full h-[10%] bg-gray-800 flex items-center justify-center`,
+    className:`w-full h-[10%] bg-gray-950 flex items-center justify-center`,
 }))``;
 
 

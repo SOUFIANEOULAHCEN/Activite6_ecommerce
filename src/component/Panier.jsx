@@ -50,14 +50,13 @@ export default function Cart() {
             <th className="py-3 px-4 font-semibold">Product Name</th>
             <th className="py-3 px-4 font-semibold">Price</th>
             <th className="py-3 px-4 font-semibold">Quantity</th>
-            <th className="py-3 px-4 font-semibold"></th>
           </tr>
         </thead>
         <tbody className="text-center">
           {products.map((product, index) => (
             <tr key={index} className="border-b border-gray-300 hover:bg-gray-100">
               <td className="py-2 px-4 text-gray-700">
-                {product.title.split("").splice(0, 30)}{"..."} 
+                {product.title.split("").splice(0, 40)}{"..."} 
               </td>
               <td className="py-2 px-4 text-gray-700">
                 {product.price * (quantities[index] || 1)} {" Dh"}
@@ -72,17 +71,12 @@ export default function Cart() {
                   className="text-gray-950 bg-gray-200 px-6 py-2 rounded-xl sm:w-[60%] lg:w-[30%]"
                 />
               </td>
-              <td className="py-2 px-4 text-gray-700 flex gap-4 items-center justify-center">
-                <button className="border border-red-600 text-red-600 font-semibold px-6 py-2 rounded-lg hover:bg-red-600 hover:text-white duration-500 bg-white">
-                  Delete
-                </button>
-              </td>
             </tr>
           ))}
         </tbody>
       </table>
       <div className="h-[10%] flex items-center justify-center px-5 bg-gray-950 text-gray-100 mt-5 sm:w-[30%] lg:w-[10%] rounded-lg ">
-        Total: {totalPrice} Dh
+        Total: {totalPrice.toFixed(2)} Dh
       </div>
     </ShoppingList>
   );
